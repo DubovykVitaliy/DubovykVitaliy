@@ -23,8 +23,34 @@
 
 'use strict';
 
+// const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?','');
+// console.log(numberOfFilms);
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false,
+// };
+// const a = prompt('Один из последних просмотренных фильмов?',''),
+//       b = prompt('На сколько оцените его?',''),
+//       c = prompt('Один из последних просмотренных фильмов?',''),
+//       d = prompt('На сколько оцените его?','');
+//       personalMovieDB.movies[a] = b;
+//       personalMovieDB.movies[c] = d;
+// console.log(personalMovieDB);
+
+
 const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?','');
 console.log(numberOfFilms);
+if(numberOfFilms < 10){
+    console.log('so little');
+}else if(numberOfFilms >= 10 && numberOfFilms <= 30){
+    console.log('so good');
+}else if ( numberOfFilms > 30){
+    console.log('excelent');
+} else {console.log('error');}
+
 const personalMovieDB = {
     count: numberOfFilms,
     movies: {},
@@ -32,10 +58,42 @@ const personalMovieDB = {
     genres: [],
     privat: false,
 };
-const a = prompt('Один из последних просмотренных фильмов?',''),
-      b = prompt('На сколько оцените его?',''),
-      c = prompt('Один из последних просмотренных фильмов?',''),
-      d = prompt('На сколько оцените его?','');
-      personalMovieDB.movies[a] = b;
-      personalMovieDB.movies[c] = d;
+
+// for(let i = 0; i < 2; i ++){
+//     let a = prompt('Один из последних просмотренных фильмов?','');
+//     let b = prompt('На сколько оцените его?','');
+    
+//     if(a != null && b != null && a != '' && b != '' && a.length < 50){
+//         personalMovieDB.movies[a] = b;
+//     } else{
+//         i--;
+//         }
+   
+// }
+
+
+let i = 0;
+// while(i < 2){
+//     let a = prompt('Один из последних просмотренных фильмов?','');
+//     let b = prompt('На сколько оцените его?','');
+    
+//     if(a != null && b != null && a != '' && b != '' && a.length < 50){
+//         personalMovieDB.movies[a] = b;
+//     } else{
+//         i--;
+//         }
+//         i++
+// }
+
+do{
+    let a = prompt('Один из последних просмотренных фильмов?','');
+    let b = prompt('На сколько оцените его?','');
+    
+    if(a != null && b != null && a != '' && b != '' && a.length < 50){
+        personalMovieDB.movies[a] = b;
+    } else{
+        i--;
+        }
+        i++;
+}while(i < 2);
 console.log(personalMovieDB);
